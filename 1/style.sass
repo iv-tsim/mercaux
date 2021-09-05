@@ -1,0 +1,33 @@
+*, *::before, *::after
+    box-sizing: border-box
+
+*
+    outline: none
+    padding: 0
+    margin: 0
+    
+.logos
+    display: grid
+    grid-template-columns: repeat(6, 1fr)
+    grid-gap: 50px
+    padding: 50px 15px
+    &__item
+        display: inline-flex
+        align-items: center
+        justify-content: center
+        img
+            width: 100%
+
+@media (max-width: 699px)
+    .logos
+        grid-template-columns: repeat(3, 1fr)
+
+@media (max-width: 599px)
+    .logos
+        grid-template-columns: repeat(2, 1fr)
+        grid-gap: 40px
+
+@media (max-width: 399px)
+    .logos
+        grid-template-columns: 1fr
+        grid-gap: 30px

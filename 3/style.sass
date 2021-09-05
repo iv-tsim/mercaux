@@ -1,0 +1,50 @@
+*, *::before, *::after
+    box-sizing: border-box
+
+*
+    outline: none
+    padding: 0
+    margin: 0
+
+.item
+    display: grid
+    align-items: center
+    grid-template-columns: repeat(5, 1fr)
+    &-img
+        background-repeat: no-repeat
+        background-position: center center
+        background-size: contain
+        display: inline-block
+        grid-column: 3 span / auto
+        &__sizer
+            padding-bottom: 37%
+    &-text
+        padding: 15px
+        display: inline-block
+        vertical-align: middle
+        grid-column: 2 span / auto
+        h2
+            margin-bottom: 20px
+        p
+            margin-bottom: 10px
+            &:last-child
+                margin-bottom: 0
+    &:nth-child(odd)
+        .item
+            &-img
+                order: 1
+            &-text
+                order: 0
+
+@media (max-width: 599px)
+    .item
+        &-img, &-text
+            grid-column: 5 span / auto
+        &-text
+            padding: 20px 15px
+        &:nth-child(odd)
+            .item
+                &-img
+                    order: 0
+                &-text
+                    order: 1
