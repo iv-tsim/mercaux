@@ -5,3 +5,61 @@
     outline: none
     padding: 0
     margin: 0
+
+body
+    padding-top: 50px
+    padding-bottom: 100px
+
+.slider
+    max-width: 60%
+    margin: 0 auto
+    padding: 0 15px
+    &-item
+        position: relative
+        display: none
+        &-img
+            background-repeat: no-repeat
+            background-position: center center
+            background-size: contain
+            &__sizer
+                padding-bottom: 70%
+        &.active
+            display: block
+        &__text
+            position: absolute
+            right: 40px
+            bottom: -40px
+            background-color: #fff
+            padding: 20px 30px
+            width: 30%
+            box-shadow: 0px 0px 30px 5px rgba(0, 0, 0, 0.1)
+
+@media (max-width: 1300px)
+    .slider
+        max-width: 70%
+        &-item
+            &__text
+                width: 40%
+
+@media (max-width: 1000px)
+    .slider
+        max-width: 80%
+        &-item
+            &__text
+                width: 50%
+                padding: 15px 20px
+
+@media (max-width: 600px)
+    .slider
+        max-width: 90%
+
+@media (max-width: 500px)
+    .slider
+        max-width: 100%
+        &-item
+            &__text
+                right: 20px
+                bottom: -20px
+                width: 70%
+                padding: 10px 15px
+                font-size: 14px

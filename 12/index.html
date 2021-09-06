@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>12</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <a href="#modal" data-modal="true" class="btn">Открыть модалку</a>
+    <div class="message">Успех</div>
+    <div class="modal-wrapper" id="modal">
+        <div class="modal">
+            <form action="#" class="form">
+                <input type="email" class="input form-input" name="email" placeholder="E-mail">
+                <input type="text" class="input form-input" name="name" placeholder="Имя">
+                <input type="text" class="input form-input" placeholder="Что-то">
+                <input type="submit" class="btn form-btn" value="Отправить">
+            </form>
+            <img src="./close.svg" alt="close" class="modal-close">
+        </div>
+        <div class="modal-overlay"></div>
+    </div>
+    <script src="./main.js"></script>
+</body>
+</html>
